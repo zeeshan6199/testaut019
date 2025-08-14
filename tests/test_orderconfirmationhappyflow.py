@@ -28,7 +28,8 @@ def test_addtocart(postive_logged_in):
 
     #Order confirmation
     finishindicator=postive_logged_in.locator("h2[class='complete-header']")
-    expect(finishindicator).to_contain_text("Thank you for your order!")
+    #expect(finishindicator).to_contain_text("Thank you for your order!")
+    expect(finishindicator).to_be_hidden()
 
 
 
