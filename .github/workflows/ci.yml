@@ -9,7 +9,7 @@ jobs:
         with: { python-version: '3.11', cache: 'pip' }
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps
-      - run: pytest -q --html=report.html --self-contained-html --junitxml=pytest-junit.xml
+      - run: pytest
       - uses: actions/upload-artifact@v4
         with:
           name: reports
